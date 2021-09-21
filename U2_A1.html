@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="InputText">
+    <button id="ActionButton">Button</button>
+    <script>
+    document.getElementById("ActionButton").addEventListener('click', function functions(){
+        let input = (document.getElementById('InputText').value);
+        let splited_input_lower = [];
+        console.log(input);
+        (function() {
+            let count_a = 0;
+            let splited_input = input.split('');
+            splited_input.map((l) => {
+                if(l === 'a'){
+                    count_a++
+                };
+                splited_input_lower.push(l.toLowerCase())
+           });
+            console.log(count_a);
+           
+            
+        })();
+        
+        funtion3(splited_input_lower);
+    });
+
+    funtion3 = splited_input => {
+        if(splited_input[0] === ('a' || 'e' || 'i' || 'o' || 'u' )){
+            console.log("an");
+        }else{
+            console.log("a");
+        }
+    }
+
+    </script>
+    
+</body>
+</html>
